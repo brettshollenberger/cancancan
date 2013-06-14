@@ -5,6 +5,10 @@ class Movie < ActiveRecord::Base
     presence: true
   }
 
+  validates :title, {
+    uniqueness: true
+  }
+
   has_many :reviews, {
     dependent: :destroy,
     inverse_of: :movie

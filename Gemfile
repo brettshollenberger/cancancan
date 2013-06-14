@@ -10,6 +10,7 @@ gem "twitter-bootstrap-rails"
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'simple_form'
 
 group :development, :test do
   gem 'capybara'
