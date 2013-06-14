@@ -33,6 +33,7 @@ GEM
       rake
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
+    bootstrap_form (0.3.2)
     builder (3.0.4)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -159,6 +160,8 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    shoulda-matchers (2.1.0)
+      activesupport (>= 3.0.0)
     simple_form (2.1.0)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -194,6 +197,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  bootstrap_form
   capybara
   coffee-rails (~> 3.2.1)
   devise
@@ -206,6 +210,7 @@ DEPENDENCIES
   rails (= 3.2.13)
   rspec-rails
   sass-rails (~> 3.2.3)
+  shoulda-matchers
   simple_form
   therubyracer
   twitter-bootstrap-rails

@@ -1,7 +1,7 @@
 class Review < ActiveRecord::Base
   attr_accessible :body, :movie_id
 
-  validates :body, :movie, {
+  validates :body, :movie, :user, {
     presence: true
   }
 
@@ -10,6 +10,10 @@ class Review < ActiveRecord::Base
   }
 
   belongs_to :movie, {
+    inverse_of: :reviews
+  }
+
+  belongs_to :user, {
     inverse_of: :reviews
   }
 end

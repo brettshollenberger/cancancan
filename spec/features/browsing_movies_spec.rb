@@ -23,6 +23,7 @@ feature "Page surfing" do
     expect(page).to have_content("Now Playing: Harassment Park")
     expect(page).to have_css("p.description")
     expect(page).to have_content("A devestating tale dinos and assault.")
+    expect(page).to have_content("Reviews")
   end
 
   scenario "Create a new movie" do
