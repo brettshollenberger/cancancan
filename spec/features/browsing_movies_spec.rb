@@ -7,6 +7,7 @@ feature "Page surfing" do
 
   background do
     user = FactoryGirl.create(:user)
+    admin = FactoryGirl.create(:admin)
     movie = FactoryGirl.create(:movie)
     login_as(user, :scope => :user)
   end
@@ -27,6 +28,7 @@ feature "Page surfing" do
   end
 
   scenario "Create a new movie" do
+    user.role = "admin"
     visit root_path
     click_link "Add Moviefilm"
     expect(page).to have_content("Add a Movie")

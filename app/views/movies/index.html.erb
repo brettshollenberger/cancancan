@@ -1,5 +1,10 @@
 <div class="container">
   <div class="notice"><%= notice %></div>
+  <% if current_user %>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "Log in", new_user_session_path %>
+  <% end %>
   <h1>Movies</h1>
   <table class="table table-striped">
     <thead>
@@ -20,5 +25,7 @@
     <% end %>
   </table>
   <br>
-  <%= link_to "Add Moviefilm", new_movie_path %>
+  <% if can? :manage, @movie %>
+    <%= link_to "Add Moviefilm", new_movie_path %>
+  <% end %>
 </div>
