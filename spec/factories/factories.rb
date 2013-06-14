@@ -16,7 +16,8 @@ FactoryGirl.define do
   end
 
   factory :review do
-    body "This movie was great!"
     movie
+    user
+    body "This movie was great!"
   end
 end

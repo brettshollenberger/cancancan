@@ -1,0 +1,8 @@
+<%= bootstrap_form_for [@movie, @review], html: { class: 'form-horizontal' }, help: :block do |f| %>
+
+    <%= f.text_area :body, rows: 8, placeholder: "Hipster ipsum yolo sit amet..." %>
+    <br>
+  <%= f.actions do %>
+    <%= f.primary 'Review' %>
+  <% end %>
+<% end %>
